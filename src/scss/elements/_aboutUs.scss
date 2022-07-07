@@ -1,0 +1,51 @@
+.aboutUs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 70px;
+
+  &__left {
+    align-items: center;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+    span {
+      text-align: center;
+    }
+
+    &-title {
+      color: $color-dark-gray;
+      font-size: 38px;
+      letter-spacing: -0.76px;
+      line-height: 55px;
+      padding-bottom: 26px;
+    }
+
+    &-text {
+      color: $color-dark-gray;
+      font-size: 30px;
+      letter-spacing: -0.6px;
+      line-height: 54px;
+      padding: 0 18%;
+      padding-bottom: 40px;
+      padding-top: 55px;
+      text-align: center;
+    }
+
+    .signature {
+      align-self: flex-end;
+      padding-right: 18%;
+    }
+  }
+
+  &__right {
+    background-image: url("../../assets/People.jpg");
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 935px;
+    width: 50%;
+  }
+}

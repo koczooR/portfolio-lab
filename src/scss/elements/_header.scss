@@ -1,0 +1,103 @@
+header {
+  position: relative;
+  width: 100%;
+
+  .navigation {
+    margin-right: 7%;
+    padding: 37px 0;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+
+    a {
+      color: $color-dark-gray;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 10px 0;
+      padding-left: 55px;
+      text-decoration: none;
+    }
+
+    &__login {
+      display: flex;
+      justify-content: flex-end;
+      line-height: 36px;
+      margin-bottom: 17px;
+
+      a {
+        color: $color-gray;
+        font-size: 14px;
+        padding: 10px;
+        padding-right: 20px;
+      }
+
+      .btn-register {
+        border: 1px solid $color-yellow;
+        padding-right: 10px;
+      }
+    }
+
+    &__menu {
+      line-height: 42px;
+
+      .btn-start {
+        border: 1px solid $color-dark-gray;
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  .hero {
+    align-items: center;
+    display: flex;
+
+    &__left {
+      transform: translateX(-480px);
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      margin-right: 7%;
+      padding-top: 50px;
+      position: absolute;
+      right: 5%;
+      text-align: center;
+
+      span {
+        color: $color-dark-gray;
+        font-size: 38px;
+        line-height: 55px;
+        padding-bottom: 25px;
+      }
+
+      img {
+        margin: 0 auto;
+        padding-bottom: 65px;
+      }
+
+      .btn-container {
+        display: flex;
+        gap: 44px;
+        justify-content: center;
+
+        .btn {
+          border: 1px solid $color-dark-gray;
+          background-color: #fff;
+          color: $color-dark-gray;
+          cursor: pointer;
+          font-size: 36px;
+          font-weight: 300;
+          line-height: 45px;
+          padding: 13px 93px;
+          text-align: center;
+          text-decoration: none;
+        }
+
+        .btn-second {
+          padding: 13px 51px;
+        }
+      }
+    }
+  }
+}
