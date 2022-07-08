@@ -1,4 +1,5 @@
 import { HomeAboutUs } from "./HomeAboutUs";
+import { HomeContact } from "./HomeContact";
 import { HomeHeader } from "./HomeHeader";
 import { HomeSimpleSteps } from "./HomeSimpleSteps";
 import { HomeThreeColumns } from "./HomeThreeColumns";
@@ -12,6 +13,7 @@ export const Home = () => {
       <HomeSimpleSteps />
       <HomeAboutUs />
       <HomeWhoWeHelp />
+      <HomeContact />
     </>
   );
 };

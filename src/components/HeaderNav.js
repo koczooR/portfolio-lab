@@ -27,9 +27,9 @@ export const HeaderNav = () => {
         <ScrollLink to="whoWeHelp" smooth={true}>
           Fundacja i organizacje
         </ScrollLink>
-        <a href="/" className="btn-kontakt">
+        <ScrollLink to="contact" smooth={true} className="btn-kontakt">
           Kontakt
-        </a>
+        </ScrollLink>
       </div>
     </nav>
   );
