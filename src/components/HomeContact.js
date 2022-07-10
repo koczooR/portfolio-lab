@@ -10,7 +10,7 @@ export const HomeContact = () => {
         <img src={decoration} alt="Decoration"></img>
         <form>
           <div>
-            <label>
+            <label className="label-name">
               Wpisz swoje imię
               <input type="text" name="name"></input>
             </label>

@@ -84,3 +84,49 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .simpleSteps {
+    span {
+      font-size: 26px;
+    }
+
+    .fourColumns {
+      .fourColumnsContainer {
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+
+        .oneColumn {
+          padding: 30px 0;
+          flex-basis: 50%;
+        }
+      }
+    }
+
+    .btn-container {
+      .btn {
+        font-size: 26px;
+        line-height: 35px;
+        padding: 13px 43px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .simpleSteps {
+    .fourColumns {
+      .fourColumnsContainer {
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+
+        .oneColumn {
+          padding: 30px 0;
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}

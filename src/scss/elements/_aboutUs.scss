@@ -49,3 +49,42 @@
     width: 50%;
   }
 }
+
+@media (max-width: 1024px) {
+  .aboutUs {
+    .aboutUs__left {
+      .aboutUs__left-title {
+        font-size: 32px;
+        line-height: 49px;
+      }
+
+      .aboutUs__left-text {
+        font-size: 24px;
+        line-height: 48px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutUs {
+    flex-direction: column;
+
+    .aboutUs__left {
+      padding: 30px 0;
+      width: 100%;
+    }
+
+    .aboutUs__right {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutUs {
+    .aboutUs__right {
+      display: none;
+    }
+  }
+}

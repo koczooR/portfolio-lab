@@ -53,6 +53,7 @@ header {
 
     &__left {
       transform: translateX(-480px);
+      width: 100%;
     }
 
     &__right {
@@ -96,6 +97,147 @@ header {
 
         .btn-second {
           padding: 13px 51px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  header {
+    .hero__left {
+      img {
+        transform: translateX(100px);
+        width: 1095px;
+      }
+    }
+
+    .hero__right {
+      span {
+        font-size: 30px;
+        line-height: 47px;
+      }
+
+      .btn-container {
+        .btn {
+          font-size: 22px;
+          line-height: 30px;
+          padding: 13px 77px;
+        }
+
+        .btn-second {
+          padding: 13px 51px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    .hero {
+      &::after {
+        content: "";
+        background: #ffffffc9;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      .hero__right {
+        z-index: 1;
+
+        span {
+          font-size: 26px;
+          line-height: 43px;
+        }
+
+        .btn-container {
+          .btn {
+            font-size: 18px;
+            line-height: 26px;
+            padding: 13px 61px;
+          }
+
+          .btn-second {
+            padding: 13px 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .navigation {
+      display: none;
+    }
+    .hero {
+      .hero__left {
+        img {
+          transform: translateX(310px);
+          width: 500px;
+        }
+      }
+      .hero__right {
+        margin-right: 0;
+        right: 50%;
+        transform: translateX(50%);
+
+        span {
+          font-size: 18px;
+          line-height: 35px;
+        }
+
+        img {
+          padding-bottom: 25px;
+        }
+
+        .btn-container {
+          .btn {
+            font-size: 14px;
+            line-height: 22px;
+            padding: 13px 53px;
+          }
+
+          .btn-second {
+            padding: 13px 37px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    .hero {
+      .hero__right {
+        padding-left: 10px;
+        padding-right: 10px;
+        span {
+          font-size: 18px;
+          line-height: 35px;
+        }
+
+        img {
+          padding-bottom: 25px;
+        }
+
+        .btn-container {
+          gap: 20px;
+          .btn {
+            font-size: 14px;
+            line-height: 22px;
+            padding: 13px 43px;
+          }
+
+          .btn-second {
+            padding: 13px 27px;
+          }
         }
       }
     }
