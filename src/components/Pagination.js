@@ -1,18 +1,16 @@
-export const Pagination = () => {
-  return (
-    <div className="pagination">
-      <span className="btn_border">1</span>
-      <span>2</span>
-      <span>3</span>
-    </div>
-  );
-};
+export const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+  const pageNumbers = [];
 
-export const Pagination2 = () => {
+  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+    pageNumbers.push(i);
+  }
   return (
     <div className="pagination">
-      <span className="btn_border">1</span>
-      <span>2</span>
+      {pageNumbers.map((number) => (
+        <span key={number} onClick={() => paginate(number)}>
+          {number}
+        </span>
+      ))}
     </div>
   );
 };

@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import hamburgerMenu from "../assets/icons8-menu-60.png";
+import { useState } from "react";
 
 export const HeaderNav = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <nav className="navigation">
+      <button className="hamburgerMenu" onClick={() => setIsExpanded(!isExpanded)}>
+        <img src={hamburgerMenu} alt="Menu"></img>
+      </button>
       <ul className="navigation__login">
         <li>
           <Link to="/logowanie">Zaloguj</Link>
@@ -14,7 +21,7 @@ export const HeaderNav = () => {
           </Link>
         </li>
       </ul>
-      <div className="navigation__menu">
+      <ul className={isExpanded ? "navigation__menu expanded" : "navigation__menu"}>
         <Link to="/" className="btn-start">
           Start
         </Link>
@@ -30,7 +37,7 @@ export const HeaderNav = () => {
         <ScrollLink to="contact" smooth={true} className="btn-kontakt">
           Kontakt
         </ScrollLink>
-      </div>
+      </ul>
     </nav>
   );
 };

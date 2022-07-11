@@ -120,6 +120,11 @@
         cursor: pointer;
         padding: 13px 15px;
         margin-right: 15px;
+
+        a {
+          color: $color-dark-gray;
+          text-decoration: none;
+        }
       }
     }
   }

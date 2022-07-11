@@ -7,7 +7,13 @@ header {
     padding: 37px 0;
     position: absolute;
     right: 0;
-    z-index: 1;
+    z-index: 2;
+
+    .hamburgerMenu {
+      background-color: transparent;
+      border: none;
+      display: none;
+    }
 
     a {
       color: $color-dark-gray;
@@ -173,7 +179,49 @@ header {
 @media (max-width: 768px) {
   header {
     .navigation {
-      display: none;
+      margin: 0;
+      padding: 10px 0;
+      width: 100%;
+
+      a {
+        padding: 0;
+        border-top: 1px solid $color-dark-gray;
+      }
+
+      .hamburgerMenu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        z-index: 10;
+      }
+
+      ul {
+        display: none;
+      }
+
+      .navigation__menu {
+        background-color: #fff;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top: 70px;
+        width: 100%;
+
+        .btn-start {
+          border: none;
+          border-top: 1px solid $color-dark-gray;
+          padding: 0;
+        }
+
+        .btn-kontakt {
+          border-bottom: 1px solid $color-dark-gray;
+        }
+      }
+
+      .navigation__menu.expanded {
+        display: flex;
+      }
     }
     .hero {
       .hero__left {
