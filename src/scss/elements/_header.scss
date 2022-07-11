@@ -20,7 +20,7 @@ header {
       cursor: pointer;
       font-size: 18px;
       padding: 10px 0;
-      padding-left: 55px;
+      padding-left: 50px;
       text-decoration: none;
     }
 
@@ -40,6 +40,11 @@ header {
       .btn-register {
         border: 1px solid $color-yellow;
         padding-right: 10px;
+
+        &:hover {
+          background-color: $color-yellow;
+          transition: 0.3s;
+        }
       }
     }
 
@@ -49,6 +54,12 @@ header {
       .btn-start {
         border: 1px solid $color-dark-gray;
         padding: 10px 20px;
+
+        &:hover {
+          background-color: $color-yellow;
+          border: 1px solid $color-yellow;
+          transition: 0.3s;
+        }
       }
     }
   }
@@ -99,6 +110,12 @@ header {
           padding: 13px 93px;
           text-align: center;
           text-decoration: none;
+
+          &:hover {
+            background-color: $color-yellow;
+            border: 1px solid $color-yellow;
+            transition: 0.3s;
+          }
         }
 
         .btn-second {
@@ -221,6 +238,10 @@ header {
 
       .navigation__menu.expanded {
         display: flex;
+
+        a:hover {
+          background-color: gray;
+        }
       }
     }
     .hero {

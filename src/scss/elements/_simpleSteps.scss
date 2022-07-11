@@ -81,6 +81,12 @@
       text-align: center;
       text-decoration: none;
       width: 124px;
+
+      &:hover {
+        background-color: $color-yellow;
+        border: 1px solid $color-yellow;
+        transition: 0.3s;
+      }
     }
   }
 }

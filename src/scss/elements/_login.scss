@@ -68,6 +68,12 @@
     .btn {
       border: 1px solid $color-dark-gray;
       padding: 13px 15px;
+
+      &:hover {
+        background-color: $color-yellow;
+        border: 1px solid $color-yellow;
+        transition: 0.3s;
+      }
     }
   }
 
