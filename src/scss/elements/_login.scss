@@ -15,18 +15,24 @@
     text-align: center;
   }
 
-  .loginBox {
-    background-color: $color-white;
-    margin-top: 60px;
-    margin-bottom: 53px;
+  form {
     width: 400px;
 
-    form {
+    .loginBox {
       align-items: center;
+      background-color: $color-white;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      margin-top: 60px;
+      margin-bottom: 53px;
       padding: 40px 0;
+
+      .error {
+        color: red;
+        font-size: 14px;
+        padding-bottom: 25px;
+        text-align: left;
+      }
 
       label {
         color: $color-dark-gray;
@@ -35,6 +41,7 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 22px;
+        padding-bottom: 5px;
         width: 60%;
 
         input {
@@ -58,6 +65,7 @@
     font-size: 18px;
     font-weight: 300;
     line-height: 32px;
+    transform: translateX(-55px);
     width: 510px;
 
     a {
@@ -66,6 +74,7 @@
     }
 
     .btn {
+      background-color: transparent;
       border: 1px solid $color-dark-gray;
       padding: 13px 15px;
 
@@ -86,6 +95,7 @@
     padding: 13px 15px;
 
     .btn {
+      background-color: transparent;
       color: #000;
       text-decoration: none;
     }
