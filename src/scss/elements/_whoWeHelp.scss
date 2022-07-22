@@ -27,8 +27,9 @@
       border: none;
       color: $color-dark-gray;
       font-size: 24px;
-      line-height: 24px;
+      line-height: 30px;
       padding: 23px 42px;
+      width: 300px;
 
       &:hover {
         background-color: $color-yellow;
@@ -38,12 +39,12 @@
 
       &-active {
         background-color: transparent;
-        border: none;
         border: 1px solid $color-dark-gray;
         color: $color-dark-gray;
         font-size: 24px;
-        line-height: 24px;
+        line-height: 30px;
         padding: 23px 42px;
+        width: 300px;
       }
     }
   }

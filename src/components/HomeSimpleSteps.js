@@ -5,8 +5,12 @@ import search from "../assets/Icon-3.svg";
 import order from "../assets/Icon-4.svg";
 import { FourColumnsBox } from "./FourColumnsBox";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../Auth";
 
 export const HomeSimpleSteps = () => {
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <section className="simpleSteps" id="simpleSteps">
       <div className="simpleSteps__header">
@@ -22,9 +26,15 @@ export const HomeSimpleSteps = () => {
         </div>
       </div>
       <div className="btn-container">
-        <Link to="/logowanie" className="btn">
-          ODDAJ RZECZY
-        </Link>
+        {currentUser ? (
+          <Link to="/oddaj-rzeczy" className="btn">
+            ODDAJ RZECZY
+          </Link>
+        ) : (
+          <Link to="/logowanie" className="btn">
+            ODDAJ RZECZY
+          </Link>
+        )}
       </div>
     </section>
   );

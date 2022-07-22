@@ -58,6 +58,7 @@ export const Register = () => {
     }
     return errors;
   };
+
   return (
     <>
       <header>

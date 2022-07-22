@@ -2,8 +2,12 @@ import homeHero from "../assets/Home-Hero-Image.jpg";
 import decoration from "../assets/Decoration.svg";
 import { Link } from "react-router-dom";
 import { HeaderNav } from "./HeaderNav";
+import { useContext } from "react";
+import { AuthContext } from "../Auth";
 
 export const HomeHeader = () => {
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <header>
       <HeaderNav />
@@ -18,16 +22,32 @@ export const HomeHeader = () => {
           </span>
           <img src={decoration} alt="Decoration"></img>
           <div className="btn-container">
-            <Link to="/logowanie" className="btn">
-              ODDAJ
-              <br />
-              RZECZY
-            </Link>
-            <Link to="/logowanie" className="btn btn-second">
-              ZORGANIZUJ
-              <br />
-              ZBIÓRKĘ
-            </Link>
+            {currentUser ? (
+              <Link to="/oddaj-rzeczy" className="btn">
+                ODDAJ
+                <br />
+                RZECZY
+              </Link>
+            ) : (
+              <Link to="/logowanie" className="btn">
+                ODDAJ
+                <br />
+                RZECZY
+              </Link>
+            )}
+            {currentUser ? (
+              <Link to="/oddaj-rzeczy" className="btn btn-second">
+                ZORGANIZUJ
+                <br />
+                ZBIÓRKĘ
+              </Link>
+            ) : (
+              <Link to="/logowanie" className="btn btn-second">
+                ZORGANIZUJ
+                <br />
+                ZBIÓRKĘ
+              </Link>
+            )}
           </div>
         </div>
       </section>

@@ -82,6 +82,44 @@ header {
       right: 5%;
       text-align: center;
 
+      .rectangle__container {
+        display: flex;
+        gap: 60px;
+
+        .rectangle {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          &::before {
+            content: "";
+            width: 135px;
+            height: 135px;
+            border: 1px solid $color-dark-gray;
+            position: absolute;
+            transform: rotate(45deg);
+          }
+
+          &__number {
+            color: $color-dark-gray;
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 27px;
+            text-align: center;
+          }
+
+          &__text {
+            color: $color-dark-gray;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 27px;
+            text-align: center;
+            width: 100px;
+          }
+        }
+      }
+
       span {
         color: $color-dark-gray;
         font-size: 38px;
@@ -89,9 +127,21 @@ header {
         padding-bottom: 25px;
       }
 
+      .fourStepsText {
+        color: $color-dark-gray;
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 55px;
+        padding-bottom: 60px;
+      }
+
       img {
         margin: 0 auto;
         padding-bottom: 65px;
+      }
+
+      .decorationImg {
+        padding-bottom: 20px;
       }
 
       .btn-container {

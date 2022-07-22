@@ -161,14 +161,14 @@ export const HomeWhoWeHelp = () => {
         potrzebują.
       </span>
       <div className="carousel">
-        {fundationIsActive ? <Fundations posts={currentFundationPosts} /> : null}
-        {fundationIsActive ? <Pagination postsPerPage={postsPerPage} totalPosts={fundation.length} paginate={paginate} /> : null}
+        {fundationIsActive && <Fundations posts={currentFundationPosts} />}
+        {fundationIsActive && <Pagination postsPerPage={postsPerPage} totalPosts={fundation.length} paginate={paginate} />}
 
-        {organizationIsActive ? <Fundations posts={currentOrganizationPosts} /> : null}
-        {organizationIsActive ? <Pagination postsPerPage={postsPerPage} totalPosts={organization.length} paginate={paginate} /> : null}
+        {organizationIsActive && <Fundations posts={currentOrganizationPosts} />}
+        {organizationIsActive && <Pagination postsPerPage={postsPerPage} totalPosts={organization.length} paginate={paginate} />}
 
-        {localIsActive ? <Fundations posts={currentLocalPosts} /> : null}
-        {localIsActive ? <Pagination postsPerPage={postsPerPage} totalPosts={local.length} paginate={paginate} /> : null}
+        {localIsActive && <Fundations posts={currentLocalPosts} />}
+        {localIsActive && <Pagination postsPerPage={postsPerPage} totalPosts={local.length} paginate={paginate} />}
       </div>
     </section>
   );
