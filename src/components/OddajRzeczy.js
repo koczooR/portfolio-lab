@@ -1,6 +1,7 @@
+import { Form } from "./Form";
 import { HeaderNav } from "./HeaderNav";
+import { HomeContact } from "./HomeContact";
 import { OddajRzeczyHeader } from "./OddajRzeczyHeader";
-import { OddajRzeczyYellowHeader } from "./OddajRzeczyYellowHeader";
 
 export const OddajRzeczy = () => {
   return (
@@ -8,7 +9,8 @@ export const OddajRzeczy = () => {
       <header>
         <HeaderNav />
         <OddajRzeczyHeader />
-        <OddajRzeczyYellowHeader />
+        <Form />
+        <HomeContact />
       </header>
     </>
   );

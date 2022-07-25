@@ -1,11 +1,12 @@
 import { HeaderNav } from "./HeaderNav";
 import decoration from "../assets/Decoration.svg";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
 export const Register = () => {
+  const navigate = useNavigate();
   const defaultState = { email: "", password: "", password2: "" };
   const [formValues, setFormValues] = useState(defaultState);
   const [formErrors, setFormErrors] = useState({});
@@ -27,16 +28,18 @@ export const Register = () => {
     setRegisterPassword(formValues.password);
   };
 
-  useEffect(() => {
+  const register = async () => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
       try {
         createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
+        navigate("/");
       } catch (error) {
         console.log(error.message);
       }
     }
-  }, [formErrors]);
+  };
+  register();
 
   const validate = (values) => {
     const errors = {};

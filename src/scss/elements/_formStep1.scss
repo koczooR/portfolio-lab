@@ -1,0 +1,111 @@
+.formStep1 {
+  background-image: url("../../assets/Background-Form.jpg");
+  padding-left: 8%;
+  height: 883px;
+
+  .step {
+    color: $color-dark-gray;
+    font-size: 24px;
+    line-height: 27px;
+    padding-bottom: 70px;
+    padding-top: 35px;
+  }
+
+  .step2Title {
+    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45px;
+    padding-bottom: 50px;
+  }
+
+  .selectForm2Container {
+    padding-bottom: 468px;
+
+    .selectForm2 {
+      color: #000;
+      font-size: 24px;
+      line-height: 32px;
+
+      select {
+        border: 1px solid $color-dark-gray;
+        color: $color-dark-gray;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 33px;
+        padding: 8px 0 8px 18px;
+        margin-left: 25px;
+        width: 300px;
+
+        option {
+          border: 1px solid $color-dark-gray;
+          width: 86px;
+        }
+      }
+    }
+  }
+
+  form {
+    p {
+      color: #000;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 45px;
+      padding-bottom: 40px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 116px;
+
+      label {
+        color: #000;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 32px;
+        margin-bottom: 30px;
+
+        input[type="radio"] {
+          appearance: none;
+          background-color: transparent;
+          border: 1px solid $color-dark-gray;
+          color: $color-yellow;
+          height: 40px;
+          margin-right: 30px;
+          transform: translateY(10px);
+          width: 40px;
+
+          &:checked {
+            background: $color-yellow;
+            content: "";
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .btn_container {
+    display: flex;
+    gap: 50px;
+  }
+
+  button {
+    background: transparent;
+    border: 1px solid $color-dark-gray;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+    padding: 23px 0;
+    margin-bottom: 50px;
+    width: 180px;
+
+    &:hover {
+      background: $color-yellow;
+      border: 1px solid $color-yellow;
+      transition: 0.3s;
+    }
+  }
+}

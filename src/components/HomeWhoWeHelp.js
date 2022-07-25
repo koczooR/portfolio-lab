@@ -147,7 +147,7 @@ export const HomeWhoWeHelp = () => {
       </div>
       <div className="whoWeHelp__buttons">
         <button className={fundationIsActive ? "btn-active" : "btn"} onClick={fundationButton}>
-          Fundacjom
+          classNames npm Fundacjom
         </button>
         <button className={organizationIsActive ? "btn-active" : "btn"} onClick={organizationButton}>
           Organizacjom pozarządowym
@@ -162,10 +162,10 @@ export const HomeWhoWeHelp = () => {
       </span>
       <div className="carousel">
         {fundationIsActive && <Fundations posts={currentFundationPosts} />}
-        {fundationIsActive && <Pagination postsPerPage={postsPerPage} totalPosts={fundation.length} paginate={paginate} />}
+        {fundationIsActive && <Pagination postsPerPage={postsPerPage} totalPosts={fundation.length} paginate={paginate} currentPage={currentPage} />}
 
         {organizationIsActive && <Fundations posts={currentOrganizationPosts} />}
-        {organizationIsActive && <Pagination postsPerPage={postsPerPage} totalPosts={organization.length} paginate={paginate} />}
+        {organizationIsActive && <Pagination postsPerPage={postsPerPage} totalPosts={organization.length} paginate={paginate} currentPage={currentPage} />}
 
         {localIsActive && <Fundations posts={currentLocalPosts} />}
         {localIsActive && <Pagination postsPerPage={postsPerPage} totalPosts={local.length} paginate={paginate} />}

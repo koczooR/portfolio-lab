@@ -1,11 +1,12 @@
 import { HeaderNav } from "./HeaderNav";
 import decoration from "../assets/Decoration.svg";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
 export const Login = () => {
+  const navigate = useNavigate();
   const defaultState = { email: "", password: "" };
   const [formValues, setFormValues] = useState(defaultState);
   const [formErrors, setFormErrors] = useState({});
@@ -27,16 +28,18 @@ export const Login = () => {
     setLoginPassword(formValues.password);
   };
 
-  useEffect(() => {
+  const login = async () => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
       try {
-        signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+        signInWithEmailAndPassword(auth, loginEmail, loginPassword).then((res) => {
+          navigate("/");
+        });
       } catch (error) {
         console.log(error.message);
       }
     }
-  }, [formErrors]);
+  };
+  login();
 
   const validate = (values) => {
     const errors = {};

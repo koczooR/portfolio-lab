@@ -13,7 +13,7 @@ export const HomeHeader = () => {
       <HeaderNav />
       <section className="hero">
         <div className="hero__left">
-          <img src={homeHero} alt="Home"></img>
+          <img src={homeHero} alt="Home" />
         </div>
         <div className="hero__right">
           <span>
