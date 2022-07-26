@@ -44,7 +44,7 @@ export const HomeContact = () => {
     } else {
       setFormSuccess(false);
     }
-  }, [formErrors]);
+  }, [formErrors, isSubmit, formValues]);
 
   const validate = (values) => {
     const errors = {};
